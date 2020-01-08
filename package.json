@@ -1,22 +1,21 @@
 {
-  "name": "express-dogemad",
-  "version": "1.0.0",
-  "description": "express 4.17.1 based template",
-  "scripts": {
-    "start": "NODE_ENV=local node ./bin/www",
-    "dev": "pm2 start ecosystem.config.js --env dev --watch",
-    "test": "NODE_ENV=dev ./node_modules/mocha/bin/mocha test"
-  },
-  "author": "dogemad <dogemad93@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "supertest": "^4.0.2"
-  }
+	"name": "express-dogemad",
+	"version": "1.0.0",
+	"description": "express 4.17.1 based template",
+	"scripts": {
+		"start": "NODE_ENV=local node ./bin/www",
+		"daemonize": "pm2 start ecosystem.config.js --env",
+		"test": "NODE_ENV=dev ./node_modules/mocha/bin/mocha test/index.js"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"cookie-parser": "^1.4.4",
+		"express": "^4.17.1",
+		"morgan": "^1.9.1"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^7.0.0",
+		"supertest": "^4.0.2"
+	}
 }

@@ -1,22 +1,17 @@
-const router = require('express').Router()
+const router = require('express').Router();
 
 module.exports = () => {
+	router.get('/', (req, res) => {
+		res.send({ hello: 'world!' });
+	});
 
-  router.get('/', (req, res) => {
-    const Example = require('../models')
+	/**
+	 * ignore favicon
+	 */
 
-    let model = new Example('1');
+	router.get('/favicon.ico', (req, res) => {
+		res.sendStatus(204);
+	});
 
-    res.send({ hello: 'world!', model: model.index })
-  })
-
-  /**
-   * ignore favicon
-   */
-
-  router.get('/favicon.ico', (req, res) => {
-    res.sendStatus(204)
-  })
-
-  return router
-}
+	return router;
+};
