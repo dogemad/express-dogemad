@@ -1,6 +1,6 @@
 # express-dogemad
 
-## install guide
+## Install guide
 
 ### Git Repository clone
 
@@ -8,43 +8,41 @@
 git clone https://github.com/dogemad/express-dogemad.git
 ```
 
-### Install node.js
-
-- Using nvm.
-```
+### Node package install
 
 ```
-
-- Node standalone.
+npm install
 ```
 
-```
-
-## Execute methods
+## Run
 
 ### Local environment
 
 ```
-npm start 
+npm start
 
-or 
+or
 
-pm2 start ecosystem.config.js --env local
+<!-- daemonize with pm2(pm2 start ecosystem.config.js --env) -->
+npm run daemonize local
 ```
 
-### Server environment
+### Remote environment
 
-- LIVE
+- Production
+
 ```
-pm2 start ecosystem.config.js --env production
+npm run daemonize production
 ```
 
-- STG
+- Stage
+
 ```
-pm2 start ecosystem.config.js --env stage
+npm run daemonize stage
 ```
 
 - OTE
+
 ```
-pm2 start ecosystem.config.js --env ote
+npm run daemonize local ote
 ```
