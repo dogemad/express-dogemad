@@ -20,7 +20,7 @@ const firstExample = function(
 				.set('Cookie', [`key=value`])
 				.expect(expect_http_status)
 				.expect(expect_callback)
-				.send(data ? data : {})
+				.send(data && data != undefined ? data : {})
 				.end((err, res) => {
 					if (err) {
 						done(err);
@@ -51,7 +51,7 @@ const secondExample = function(
 				.set('Cookie', [`key=value`])
 				.expect(expect_http_status)
 				.expect(expect_callback)
-				.send(data ? data : {})
+				.send(data && data != undefined ? data : {})
 				.end((err, res) => {
 					if (err) {
 						done(err);
