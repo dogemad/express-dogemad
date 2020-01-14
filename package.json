@@ -5,7 +5,9 @@
 	"scripts": {
 		"start": "NODE_ENV=local node ./bin/www",
 		"daemonize": "pm2 start ecosystem.config.js --env",
-		"test": "NODE_ENV=dev ./node_modules/mocha/bin/mocha test/index.js"
+		"dev": "pm2 start ecosystem.config.js --env local --watch",
+		"inspect": "pm2 start inspect.config.js --env",
+		"test": "NODE_ENV=dev ./node_modules/mocha/bin/mocha test"
 	},
 	"author": "dogemad <dogemad93@gmail.com>",
 	"license": "MIT",
